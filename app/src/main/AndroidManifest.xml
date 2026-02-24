@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bouchpro">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BouchPro">
+
+        <!-- 1. LA PAGE DE SPLASH (DÉMARRAGE) -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            <!-- C'est ici que l'intent-filter doit se trouver -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. LA PAGE D'ACCUEIL (MAIN) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- 3. LES AUTRES PAGES (Gérer les parents pour le bouton retour) -->
+        <activity
+            android:name=".activities.ClientActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.StockRespoActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.RespoActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.TransactionActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.AddClientActivity"
+            android:parentActivityName=".activities.ClientActivity" />
+
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:parentActivityName=".activities.ClientActivity" />
+
+        <activity
+            android:name=".activities.AddStockActivity"
+            android:parentActivityName=".activities.StockRespoActivity" />
+
+        <activity
+            android:name=".activities.StockHistoryActivity"
+            android:parentActivityName=".activities.StockRespoActivity" />
+
+        <activity
+            android:name=".activities.ProduitActivity"
+            android:parentActivityName=".MainActivity" />
+
+    </application>
+</manifest>

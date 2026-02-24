@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.ProduitActivity">
+
+    <!-- Titre de la page (Optionnel si tu utilises l'ActionBar) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catalogue Produits"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/titleColor"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Liste des produits existants -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProduits"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Bouton pour ajouter un nouveau type de produit (ex: Agneau) -->
+    <Button
+        android:id="@+id/btnAjouterNouveauProduit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ CRÉER NOUVEAU PRODUIT"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:padding="16dp"
+        app:cornerRadius="20dp"
+        android:elevation="6dp" />
+
+</LinearLayout>

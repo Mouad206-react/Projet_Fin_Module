@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.ClientActivity">
+
+    <!-- Barre de recherche stylée -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Rechercher un client..."
+        android:layout_marginBottom="10dp" />
+
+    <!-- Liste des clients (prend tout l'espace central) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerClients"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp" />
+
+    <!-- Bouton Ajouter en bas avec ton style -->
+    <Button
+        android:id="@+id/btnAllerAjout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ AJOUTER UN NOUVEAU CLIENT"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="16dp"
+        app:cornerRadius="20dp"
+        android:elevation="6dp"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

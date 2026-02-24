@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="20dp">
+
+    <!-- FORMULAIRE (En haut) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtRespoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Responsable : ..."
+                android:textStyle="bold"
+                android:textColor="@color/titleColor"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etNomProduit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nom (ex: Poulet)"
+                android:padding="12dp"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPrixProduit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Prix/KG"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginEnd="5dp" />
+
+                <EditText
+                    android:id="@+id/etQuantiteProduit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Quantité"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:background="@drawable/edittext_bg" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AJOUTER"
+                android:backgroundTint="@color/buttonColor"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produits ajoutés à l'instant :"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <!-- LISTE EN DIRECT (Prend le reste de la place) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSessionStock"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

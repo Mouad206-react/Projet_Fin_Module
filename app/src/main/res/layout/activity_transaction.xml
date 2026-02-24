@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="true"
+    tools:context=".activities.TransactionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- Carte regroupant le formulaire -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choisir le client :"
+                    android:textStyle="bold"
+                    android:textColor="@color/titleColor"
+                    android:layout_marginBottom="8dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerClients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginBottom="20dp" />
+
+                <EditText
+                    android:id="@+id/editMontant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Montant (DH)"
+                    android:inputType="numberDecimal"
+                    android:padding="16dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="20dp"
+                    android:elevation="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type d'opération :"
+                    android:textStyle="bold"
+                    android:textColor="@color/titleColor"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radioCredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dette (+)"
+                        android:checked="true"
+                        android:layout_marginEnd="15dp" />
+                    <RadioButton
+                        android:id="@+id/radioPaiement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paiement (-)" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bouton Enregistrer stylé -->
+        <Button
+            android:id="@+id/btnEnregistrerTrans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENREGISTRER L'OPÉRATION"
+            android:backgroundTint="@color/buttonColor"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:cornerRadius="20dp"
+            android:elevation="6dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>

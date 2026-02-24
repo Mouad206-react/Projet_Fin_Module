@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/backgroundColor">
+
+    <!-- Zone des filtres stylisée -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp">
+
+        <!-- Première ligne de filtres -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFiltreJour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Jour"
+                android:textSize="11sp"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/buttonColor"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnFiltreSemaine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Semaine"
+                android:textSize="11sp"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/buttonColor"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnFiltreMois"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mois"
+                android:textSize="11sp"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/buttonColor"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Deuxième ligne (Tout et Calendrier) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnFiltreTout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tout"
+                android:textSize="11sp"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/buttonColor"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnFiltreCalendrier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="📅 Choisir une Date"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:layout_margin="4dp"
+                app:cornerRadius="15dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Liste des produits -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStockHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"/>
+
+</LinearLayout>

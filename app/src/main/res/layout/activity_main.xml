@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
+
+    <!-- Titre Principal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boucherie Manager"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/titleColor"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.08"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Bouton Gestion Clients -->
+    <Button
+        android:id="@+id/btnClients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestion des Clients"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        app:cornerRadius="20dp"
+        android:elevation="6dp"/>
+
+    <!-- Bouton Ventes et Crédits -->
+    <Button
+        android:id="@+id/btnTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ventes et Crédits"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        app:cornerRadius="20dp"
+        android:elevation="6dp"/>
+
+    <!-- Bouton Stock -->
+    <Button
+        android:id="@+id/btnProduits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stock du Jour"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        app:cornerRadius="20dp"
+        android:elevation="6dp"/>
+
+    <!-- Bouton Personnel -->
+    <Button
+        android:id="@+id/btnMenuRespo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gérer le Personnel"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        app:cornerRadius="20dp"
+        android:elevation="6dp"/>
+
+</LinearLayout>

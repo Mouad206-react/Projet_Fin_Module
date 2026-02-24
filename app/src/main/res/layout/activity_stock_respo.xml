@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <!-- Titre de la page stylé (S'affichera sous la barre rouge) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHOISIR UN RESPONSABLE"
+        android:textSize="22sp"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/titleColor"
+        android:gravity="center" />
+
+    <!-- Liste des responsables -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRespoStock"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>
