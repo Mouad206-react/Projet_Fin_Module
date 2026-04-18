@@ -261,6 +261,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    public boolean updateClient(int id, String nouveauNom, String nouveauTel) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("nom", nouveauNom);
+        values.put("telephone", nouveauTel);
+
+        // Met à jour la ligne où l'ID correspond
+        int result = db.update("table_client", values, "id = ?", new String[]{String.valueOf(id)});
+        return result > 0;
+    }
+
     public void deleteRespo(int respoId) {
         SQLiteDatabase db = this.getWritableDatabase();
         // 1. Supprimer les produits enregistrés par ce responsable

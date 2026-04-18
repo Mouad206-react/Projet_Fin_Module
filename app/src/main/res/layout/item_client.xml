@@ -55,22 +55,32 @@
             android:padding="0dp"
             app:cornerRadius="8dp" />
 
-        <!-- Espaceur pour l'icône Info : Poids 1.3 -->
+        <!-- Icône Modifier (Crayon) -->
+        <ImageButton
+            android:id="@+id/btnEditClient"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.8"
+            android:src="@android:drawable/ic_menu_edit"
+            android:background="?android:attr/selectableItemBackground"
+            app:tint="@color/buttonColor" />
+
+        <!-- Icône Infos (i) -->
         <ImageButton
             android:id="@+id/btnDetails"
             android:layout_width="0dp"
             android:layout_height="36dp"
-            android:layout_weight="1.3"
+            android:layout_weight="1.1"
             android:src="@android:drawable/ic_menu_info_details"
             android:background="?android:attr/selectableItemBackground"
             app:tint="@color/titleColor" />
 
-        <!-- Espaceur pour l'icône Poubelle : Poids 1.3 -->
+        <!-- Icône Supprimer (Poubelle) -->
         <ImageButton
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
             android:layout_height="36dp"
-            android:layout_weight="1.3"
+            android:layout_weight="1"
             android:src="@android:drawable/ic_menu_delete"
             android:background="?android:attr/selectableItemBackground"
             app:tint="#D32F2F" />
